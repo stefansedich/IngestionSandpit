@@ -37,7 +37,7 @@ namespace Publisher
                         for (var i = 0; i < 100 * 1000; i++)
                         {
                             var properties = channel.CreateBasicProperties();
-                            var collectionId = rnd.Next(1, 1).ToString();
+                            var collectionId = rnd.Next(1, 1000).ToString();
                             var message = new IngestEvent(collectionId, "DoStuff");
 
                             channel.BasicPublish("events", "", properties, serializer.Serialize(message));
