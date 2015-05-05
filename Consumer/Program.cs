@@ -37,7 +37,7 @@ namespace Consumer
             var settings = new RabbitConsumerSettings(
                 consumer: routingConsumerPool,
                 serializer: new BsonMessageSerializer(),
-                rabbitUri: "amqp://user:password@192.168.1.20/",
+                rabbitUri: "amqp://localhost/",
                 queue: "events",
                 streams: 8,
                 prefetchCount: 512
